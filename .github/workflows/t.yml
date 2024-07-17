@@ -2,8 +2,7 @@ name: PR
 
 on:
   pull_request_target:
-    branches:
-      b
+    branches: ["b","main"]
 
 permissions:
   write-all
